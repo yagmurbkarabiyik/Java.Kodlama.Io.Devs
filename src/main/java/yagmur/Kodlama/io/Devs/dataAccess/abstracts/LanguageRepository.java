@@ -1,14 +1,10 @@
 package yagmur.Kodlama.io.Devs.dataAccess.abstracts;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import yagmur.Kodlama.io.Devs.entities.concretes.Language;
 
-public interface LanguageRepository {
+public interface LanguageRepository extends JpaRepository<Language, Integer>{
 	
-	List<Language> getAll();
-	Language getById(int id);
-	void add(Language language);
-	void update(Language language);
-	void delete(int id);
+	
 }
